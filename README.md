@@ -4,6 +4,10 @@ A simple helpdesk ticket management system built with HTML, CSS and JavaScript.
 
 The project demonstrates a basic IT support workflow where users can create, track and manage support tickets.
 
+## Screenshot
+
+![IT Helpdesk Ticket System](screenshot.png)
+
 ## Live Demo
 
 https://cloud9din.github.io/it-helpdesk-ticket-system/
