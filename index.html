@@ -8,55 +8,110 @@
 </head>
 <body>
 
-  <header>
-    <h1>IT Helpdesk Ticket System</h1>
-    <p>Log and manage support tickets</p>
+  <header class="top-header">
+    <div>
+      <h1>IT Helpdesk Ticket System</h1>
+      <p>Log, track and manage support tickets</p>
+    </div>
   </header>
 
-  <main>
+  <main class="container">
 
-    <section class="ticket-form">
-      <h2>Create a Support Ticket</h2>
+    <section class="stats">
+      <div class="stat-card">
+        <h3>Total Tickets</h3>
+        <p id="totalTickets">0</p>
+      </div>
 
-      <form id="ticketForm">
+      <div class="stat-card">
+        <h3>Open</h3>
+        <p id="openTickets">0</p>
+      </div>
 
-        <label for="name">User Name</label>
-        <input type="text" id="name" required>
+      <div class="stat-card">
+        <h3>In Progress</h3>
+        <p id="progressTickets">0</p>
+      </div>
 
-        <label for="category">Issue Category</label>
-        <select id="category" required>
-          <option value="">Select category</option>
-          <option value="Hardware">Hardware</option>
-          <option value="Software">Software</option>
-          <option value="Microsoft 365">Microsoft 365</option>
-          <option value="Network">Network</option>
-          <option value="Password">Password</option>
-          <option value="Other">Other</option>
-        </select>
-
-        <label for="priority">Priority</label>
-        <select id="priority" required>
-          <option value="">Select priority</option>
-          <option value="Low">Low</option>
-          <option value="Medium">Medium</option>
-          <option value="High">High</option>
-        </select>
-
-        <label for="description">Issue Description</label>
-        <textarea id="description" rows="5" required></textarea>
-
-        <button type="submit">Create Ticket</button>
-
-      </form>
+      <div class="stat-card">
+        <h3>Resolved</h3>
+        <p id="resolvedTickets">0</p>
+      </div>
     </section>
 
-    <section class="ticket-list">
-      <h2>Support Tickets</h2>
-      <div id="tickets"></div>
+    <section class="main-grid">
+
+      <div class="ticket-form-section">
+        <h2>Create a Support Ticket</h2>
+
+        <form id="ticketForm">
+
+          <label for="name">User Name</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter user name"
+            required
+          >
+
+          <label for="category">Issue Category</label>
+          <select id="category" required>
+            <option value="">Select category</option>
+            <option value="Hardware">Hardware</option>
+            <option value="Software">Software</option>
+            <option value="Microsoft 365">Microsoft 365</option>
+            <option value="Network">Network</option>
+            <option value="Password">Password</option>
+            <option value="Printer">Printer</option>
+            <option value="Account Access">Account Access</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="priority">Priority</label>
+          <select id="priority" required>
+            <option value="">Select priority</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+
+          <label for="description">Issue Description</label>
+          <textarea
+            id="description"
+            rows="5"
+            placeholder="Describe the technical issue"
+            required
+          ></textarea>
+
+          <button type="submit" class="primary-btn">
+            Create Ticket
+          </button>
+
+        </form>
+      </div>
+
+      <div class="ticket-list-section">
+
+        <div class="ticket-list-header">
+          <h2>Support Tickets</h2>
+
+          <select id="statusFilter">
+            <option value="All">All Tickets</option>
+            <option value="Open">Open</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Resolved">Resolved</option>
+          </select>
+        </div>
+
+        <div id="tickets"></div>
+
+      </div>
+
     </section>
 
   </main>
 
   <script src="script.js"></script>
+
 </body>
 </html>
