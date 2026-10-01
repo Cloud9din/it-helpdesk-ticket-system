@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Helpdesk Ticket System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>IT Helpdesk Ticket System</h1>
+    <p>Log and manage support tickets</p>
+  </header>
+
+  <main>
+
+    <section class="ticket-form">
+      <h2>Create a Support Ticket</h2>
+
+      <form id="ticketForm">
+
+        <label for="name">User Name</label>
+        <input type="text" id="name" required>
+
+        <label for="category">Issue Category</label>
+        <select id="category" required>
+          <option value="">Select category</option>
+          <option value="Hardware">Hardware</option>
+          <option value="Software">Software</option>
+          <option value="Microsoft 365">Microsoft 365</option>
+          <option value="Network">Network</option>
+          <option value="Password">Password</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="priority">Priority</label>
+        <select id="priority" required>
+          <option value="">Select priority</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+
+        <label for="description">Issue Description</label>
+        <textarea id="description" rows="5" required></textarea>
+
+        <button type="submit">Create Ticket</button>
+
+      </form>
+    </section>
+
+    <section class="ticket-list">
+      <h2>Support Tickets</h2>
+      <div id="tickets"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
