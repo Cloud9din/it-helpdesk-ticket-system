@@ -151,7 +151,9 @@ ticketForm.addEventListener("submit", function (event) {
     .trim();
 
   const newTicket = {
-    id: Date.now(),
+    id: tickets.length > 0
+  ? Math.max(...tickets.map(ticket => ticket.id || 1000)) + 1
+  : 1001,
     name,
     category,
     priority,
